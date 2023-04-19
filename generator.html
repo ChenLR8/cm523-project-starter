@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PUT A TITLE IN HERE -->
+    <title>This is the demo</title>
+    <!-- PUT A DESCRIPTION IN HERE -->
+    <meta name="description" content="describe content of the page here...." />
+    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
+    <link rel="stylesheet" href="styles.normalize.css" />
+    <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+    <!-- LINK TO YOUR STYLES -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <script src="scripts/scripts.js" defer></script>
+  </head>
+  <body class="otherpage">
+    <nav class="otherpage">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generator.html">Generate Your Plan</a></li>
+        <li><a href="resources.html">More Resources</a></li>
+        <li><a href="project.html">Project</a></li>
+    </ul>
+    </nav>
+    <main>
+        <article id="Generator">
+          <div class="description">
+            <h2>Let's get started!</h2>
+            <p>Thinking about visiting Boston for one day and want to put your time on the best use?</p>
+            <p>Take this short questionnaire to find out tailor-made day trips for you!</p>
+          </div>
+  
+          <div class="questions">
+            <fieldset>
+              <legend class="qtitle"> What are you looking for in Boston? (multiple choices)</legend>
+              <input type="checkbox" name="category" id="typehistorical" value="HistoricalLandmarks">
+              <label for="typehistorical">Historical landmarks</label>
+              <input type="checkbox" name="category" id="typeart" value="ArtandMuseum">
+              <label for="typeart">Art and cultural experiences</label>
+              <input type="checkbox" name="category" id="typenature" value="Naturalviews">
+              <label for="typenature">Nature and scenic views</label>
+              <input type="checkbox" name="category" id="typefun" value="Entertainment">
+              <label for="typefun">Sports and outdoor entertainment</label>
+              <input type="checkbox" name="category" id="typefood" value="FoodandBeverage">
+              <label for="typefood">Food and beverage experiences</label>
+          </fieldset>
+
+          </div>
+  
+          <div class="questions">
+            <fieldset>
+              <legend class="qtitle">
+                What type of attractions appeal to you more?</legend>
+              <input type="radio" name="typeofattractions" id="typeclassic" value="ClassicandPopular">
+              <label for="typeclassic">Classic and popular</label>
+              <input type="radio" name="typeofattractions" id="typeunique" value="HiddenGems">
+              <label for="typeunique">Unique hidden gems</label>
+
+          </fieldset>
+          </div>
+  
+          <div class="questions">
+            <fieldset>
+              <legend class="qtitle">
+                How active would you like your day to be?
+              </legend>
+              <input type="radio" name="active" id="relax" value="Relax">
+              <label for="relax">A relaxing day with minimal walking and plenty of time to sit and enjoy the scenery</label>
+              <input type="radio" name="active" id="moderate" value="Moderate">
+              <label for="moderate">A moderate day with some walking and a few activities</label>
+              <input type="radio" name="active" id="active" value="VeryActive">
+              <label for="active">An active day with plenty of walking and multiple activities</label>
+
+            </fieldset>
+          </div>
+  
+        </article>
+
+        <article class="recommedations">
+            <div id="classic-historical">
+              <div class="attrationsdes">
+              <h3 class="name">Freedom Trail</h3>
+              <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
+              <p><span class="title" >Description:</span> 
+                Learn about early Boston and U.S. history on this 2.5-mile-long trail that passes through 16 historic locations. 
+                Look out for the brick markers—starting in downtown Boston, crossing through the North End, and finishing at the famous Bunker Hill Monument in neighboring Charlestown. You'll pass by notable stops like Faneuil Hall, the Paul Revere House, and the USS Constitution frigate.
+                -TripAdvisor
+              </p>
+              </div>
+            <div class="attrationsdes">
+              <h3 class="name">John F. Kennedy Presidential Museum & Library</h3>
+              <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
+              <p><span class="title" >Description:</span> 
+              <p>
+                Relive the Kennedy era in this dynamic combination museum and library, where your visit starts with a short film and then leaves you on your own to explore a series of fascinating exhibits, including the Kennedy-Nixon debate, the Cuban Missile Crisis, the space program, 1960s campaign paraphernalia and displays about Jacqueline and other Kennedy family members. The striking, I.M. Pei-designed building overlooks the water and the Boston skyline.
+                -TripAdvisor
+              </p>
+            </div>
+            </div>
+
+            <div id="classicart">
+              <div class="attrationsdes">
+              <h3 class="name">Isabella Stewart Gardner Museum</h3>
+              <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
+              <p><span class="title" >Description:</span> 
+                A Venetian palace in the middle of Boston, Gardner's home is now a museum displaying her impressive, eclectic collection of European, American and Asian art, including sculpture, paintings, furniture, ceramics and textiles. Visitors can stroll or rest in a spectacular skylit courtyard filled with plants and flowers.
+                -TripAdvisor
+              </p></div>
+              <div class="attrationsdes">
+                <h3 class="name">Museum of Fine Arts</h3>
+                <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
+                <p><span class="title" >Description:</span> 
+                  Boston's oldest, largest and best-known art institution, the MFA houses one of the world's most comprehensive art collections and is renowned for its Impressionist paintings, Asian and Egyptian collections and early American art.
+                  -TripAdvisor
+                </p>
+              </div>
+            
+            
+            
+            </div>
+  
+        </article>
+  
+
+  
+      </main>
+  </body>
+  </html>

@@ -1,9 +1,220 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root{
+    --background-color:#fbfbed;
+    --font-color:#000000;
+    --title-color:#0d2e3d;
+    --title-color-alt:#db3e3d;
+    --link-color:#eda12c;
+    --title-font:'Oswald', sans-serif;
+    --main-font: 'Roboto', sans-serif;
+    --main-font-size: 16px;
+    --main-font-weight:400;
+    --cover-font-size:23px;
+    --h2-font-size:30px;
+    --h3-font-size: 20px;
+    
+}
 
 body {
-    background: magenta;
+    background-color: var(--background-color);
+    line-height: 1.15;
+    font-family: var(--main-font);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
 }
-p {
-    font-size: 2em;
+
+body.otherpage article{
+    max-width: 1000px;
 }
+
+/**index page**/
+
+header{
+     margin-top: 30px;
+
+
+}
+header div.container{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+}
+header div.logo{
+    display:inline-flex;
+    align-items: center;
+    max-width: 950px;
+    column-gap: 30px;
+
+}
+
+img#logo{
+    width: 300px;
+    height: auto;
+
+}
+
+img#skyline{
+    width: 100%;
+
+}
+
+header h1{
+    font-family: var(--title-font);
+    color: var(--title-color);
+    font-size: 60px;
+    margin: 0;
+
+}
+
+header p {
+    text-align: center;
+    background-color: var(--link-color);
+    border-radius: 20px;
+    padding: 1em;
+
+}
+header p a{
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: var(--cover-font-size);
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+/*nav*/
+nav{
+    position: fixed;
+    left: 0;
+    top:0;
+    right: 0;
+    margin-bottom: 5em;
+
+}
+
+
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 25px;
+    justify-content: space-around;
+}
+
+nav ul li{
+    font-size: var(--cover-font-size);
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--title-color);
+    font-weight: 500;
+    font-family: var(--title-font);
+}
+
+nav ul li a:hover{
+    color: var(--link-color);
+}
+/*
+footer p{
+    font-family: var(--title-font);
+    color: var(--title-color-alt);
+    text-align: center;
+}
+*/
+
+/*generator*/
+nav.otherpage{
+    margin: bottom 2em;
+    text-align: center;
+}
+article.recommedations{
+    display: none;
+}
+article#Generators{
+    display:grid;
+    place-content: center;
+    height: 100vh;
+}
+h2{
+    font-family: var(--title-font);
+    font-size: var(--h2-font-size);
+    color: var(--title-color-alt);
+}
+p{
+    font-size: var(--main-font-size);
+}
+legend{
+    font-weight: 500;
+    font-family: var(--title-font);
+    color: var(--title-color);
+    font-size:var(--h3-font-size);
+}
+
+fieldset{
+    border: none;
+    background-color:blanchedalmond;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+
+
+input[type=checkbox],input[type=radio]{
+    display: none;
+}
+
+label {
+    display: inline-block;
+    position: relative;
+    margin: 0.2em 2em;
+    padding-left: 2em;
+    cursor: pointer;
+}
+
+label::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    left: 0;
+    top:0;
+    background-color: white;
+    border: 2px solid var(--link-color);
+}
+
+input[type="checkbox"]:checked + label::before {
+    background-color: var(--link-color); 
+
+  }
+
+input[type="radio"]:checked + label::before {
+    background-color: var(--link-color); 
+
+  }
+
+div.description{
+    margin-top: 5rem;
+}
+  
+
