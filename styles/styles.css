@@ -14,13 +14,15 @@
     --title-color:#0d2e3d;
     --title-color-alt:#db3e3d;
     --link-color:#eda12c;
+    --card-link-color: #a29eb1;
+    --card-link-color2:#efa7a7;
     --title-font:'Oswald', sans-serif;
     --main-font: 'Roboto', sans-serif;
     --main-font-size: 16px;
     --main-font-weight:400;
     --cover-font-size:23px;
-    --h2-font-size:30px;
-    --h3-font-size: 20px;
+    --h2-font-size:33px;
+    --h3-font-size: 22px;
     
 }
 
@@ -30,56 +32,61 @@ body {
     font-family: var(--main-font);
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;
+
 }
 
 body.otherpage article{
     max-width: 1000px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 /**index page**/
 
 header{
      margin-top: 30px;
-
+     
 
 }
 header div.container{
     display:flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    gap: 50px;
     align-items: center;
-    justify-content: center;
+    place-content: center;
     margin-left: auto;
     margin-right: auto;
+    background-image:url("/images/skyline-02.png"); 
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 50px;
 
 
 
 }
-header div.logo{
-    display:inline-flex;
-    align-items: center;
-    max-width: 950px;
-    column-gap: 30px;
 
-}
 
 img#logo{
     width: 300px;
-    height: auto;
+    padding-right: 10px;
 
 }
 
-img#skyline{
-    width: 100%;
 
-}
 
 header h1{
     font-family: var(--title-font);
     color: var(--title-color);
-    font-size: 60px;
+    font-size: 50px;
     margin: 0;
+    max-width: 600px;
+    text-align: center;
 
 }
 
@@ -87,9 +94,12 @@ header p {
     text-align: center;
     background-color: var(--link-color);
     border-radius: 20px;
-    padding: 1em;
+    padding: 1rem;
+
+
 
 }
+
 header p a{
     color: var(--font-color);
     text-decoration: none;
@@ -105,10 +115,10 @@ nav{
     top:0;
     right: 0;
     margin-bottom: 5em;
+    padding-left: 0;
+
 
 }
-
-
 
 nav ul{
     display: flex;
@@ -116,6 +126,7 @@ nav ul{
     gap: 5px;
     font-size: 25px;
     justify-content: space-around;
+    padding-left: 0;
 }
 
 nav ul li{
@@ -149,11 +160,7 @@ nav.otherpage{
 article.recommedations{
     display: none;
 }
-article#Generators{
-    display:grid;
-    place-content: center;
-    height: 100vh;
-}
+
 h2{
     font-family: var(--title-font);
     font-size: var(--h2-font-size);
@@ -217,4 +224,80 @@ div.description{
     margin-top: 5rem;
 }
   
+
+/**Resources**/
+
+ul.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    padding-left: 0;
+
+}
+
+li.cardcontent{
+    list-style: none;
+    display:flex;
+    flex-grow: 1;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+li.cardcontent a{
+    text-decoration: none;
+
+}
+li.cardcontent:hover{
+    transform: scale(1.035, 1.035);
+}
+
+div.card_container{
+    background-color: var(--title-color);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    vertical-align: top;
+
+}
+
+@media screen and (max-width:680px) {
+    div.card_container{
+        min-width:470px;
+    }
+    div.large_container{
+        display: grid;
+        place-content: center;
+    }
+}
+
+div.card_container h3{
+    color: white;
+    padding: 1rem;
+}
+
+img.card{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+
+}
+
+/*
+button.readmore{
+
+    border-radius: 20px;
+    padding: 0.5rem;
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    margin-bottom: 10px;
+    width: 90%;
+
+}
+*/
 
