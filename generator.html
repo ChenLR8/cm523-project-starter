@@ -33,6 +33,27 @@
             <p>Thinking about visiting Boston for one day and want to put your time on the best use?</p>
             <p>Take this short questionnaire to find out tailor-made day trips for you!</p>
           </div>
+
+          <div class="questions">
+            <fieldset>
+              <legend class="qtitle">
+                How long would you like your one-day trip to be?
+              </legend>
+              <input type="radio" name="time" id="four" value="4">
+              <label for="four">Less than 4 hours</label>
+              <input type="radio" name="time" id="six" value="6">
+              <label for="six">4-6 hours</label>
+              <input type="radio" name="time" id="eight" value="8">
+              <label for="eight">6-8 hours</label>
+              <input type="radio" name="time" id="morethaneight" value="9">
+              <label for="morethaneight">More than 8 hours</label>
+              <button>
+                
+              </button>
+
+            </fieldset>
+            
+          </div>
   
           <div class="questions">
             <fieldset>
@@ -45,8 +66,7 @@
               <label for="typenature">Nature and scenic views</label>
               <input type="checkbox" name="category" id="typefun" value="Entertainment">
               <label for="typefun">Sports and outdoor entertainment</label>
-              <input type="checkbox" name="category" id="typefood" value="FoodandBeverage">
-              <label for="typefood">Food and beverage experiences</label>
+
           </fieldset>
 
           </div>
@@ -54,35 +74,59 @@
           <div class="questions">
             <fieldset>
               <legend class="qtitle">
-                What type of attractions appeal to you more?</legend>
-              <input type="radio" name="typeofattractions" id="typeclassic" value="ClassicandPopular">
-              <label for="typeclassic">Classic and popular</label>
-              <input type="radio" name="typeofattractions" id="typeunique" value="HiddenGems">
-              <label for="typeunique">Unique hidden gems</label>
+                Are you traveling with family and kids?</legend>
+              <input type="radio" name="family" id="family" value="Yes">
+              <label for="family">Yes</label>
+              <input type="radio" name="family" id="adult" value="No">
+              <label for="adult">No</label>
 
           </fieldset>
           </div>
-  
+
           <div class="questions">
             <fieldset>
               <legend class="qtitle">
-                How active would you like your day to be?
-              </legend>
-              <input type="radio" name="active" id="relax" value="Relax">
-              <label for="relax">A relaxing day with minimal walking and plenty of time to sit and enjoy the scenery</label>
-              <input type="radio" name="active" id="moderate" value="Moderate">
-              <label for="moderate">A moderate day with some walking and a few activities</label>
-              <input type="radio" name="active" id="active" value="VeryActive">
-              <label for="active">An active day with plenty of walking and multiple activities</label>
+                What type of transport do you prefer for your tour?</legend>
+              <input type="radio" name="transport" id="walk" value="walk">
+              <label for="walk">Walking</label>
+              <input type="radio" name="transport" id="bike" value="bike">
+              <label for="bike">Bicycle</label>
+              <input type="radio" name="transport" id="car" value="car">
+              <label for="car">Car or van</label>
+              <input type="radio" name="transport" id="publictrans" value="publictrans">
+              <label for="publictrans">Public transportation</label>
+            </fieldset>
 
+          </div>
+
+          <div class="questions">
+            <fieldset>
+              <legend class="qtitle">
+                What type of cuisine are you interested in trying during your trip? </legend>
+              <input type="radio" name="cuisine" id="seafood" value="seafood">
+              <label for="seafood">Seafood</label>
+              <input type="radio" name="cuisine" id="italian" value="italian">
+              <label for="italian">Italian</label>
+              <input type="radio" name="cuisine" id="american" value="american">
+              <label for="american">American</label>
+              <input type="radio" name="cuisine" id="asian" value="asian">
+              <label for="asian">Asian</label>
             </fieldset>
           </div>
+
+          <div class="questions">
+            <fieldset>
+              <legend class="qtitle">
+                
+              </legend>
+            </fieldset>
+          </div>
+     
   
         </article>
 
         <article class="recommedations">
-            <div id="classic-historical">
-              <div class="attrationsdes">
+            <div id="FreedomTrail">
               <h3 class="name">Freedom Trail</h3>
               <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
               <p><span class="title" >Description:</span> 
@@ -90,8 +134,9 @@
                 Look out for the brick markers—starting in downtown Boston, crossing through the North End, and finishing at the famous Bunker Hill Monument in neighboring Charlestown. You'll pass by notable stops like Faneuil Hall, the Paul Revere House, and the USS Constitution frigate.
                 -TripAdvisor
               </p>
-              </div>
-            <div class="attrationsdes">
+            </div>
+           
+            <div id="JFK">
               <h3 class="name">John F. Kennedy Presidential Museum & Library</h3>
               <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
               <p><span class="title" >Description:</span> 
@@ -99,29 +144,62 @@
                 Relive the Kennedy era in this dynamic combination museum and library, where your visit starts with a short film and then leaves you on your own to explore a series of fascinating exhibits, including the Kennedy-Nixon debate, the Cuban Missile Crisis, the space program, 1960s campaign paraphernalia and displays about Jacqueline and other Kennedy family members. The striking, I.M. Pei-designed building overlooks the water and the Boston skyline.
                 -TripAdvisor
               </p>
-            </div>
-            </div>
+              </div>
 
-            <div id="classicart">
-              <div class="attrationsdes">
+            <div id="Isabella">
               <h3 class="name">Isabella Stewart Gardner Museum</h3>
               <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
               <p><span class="title" >Description:</span> 
                 A Venetian palace in the middle of Boston, Gardner's home is now a museum displaying her impressive, eclectic collection of European, American and Asian art, including sculpture, paintings, furniture, ceramics and textiles. Visitors can stroll or rest in a spectacular skylit courtyard filled with plants and flowers.
                 -TripAdvisor
-              </p></div>
-              <div class="attrationsdes">
-                <h3 class="name">Museum of Fine Arts</h3>
-                <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
-                <p><span class="title" >Description:</span> 
-                  Boston's oldest, largest and best-known art institution, the MFA houses one of the world's most comprehensive art collections and is renowned for its Impressionist paintings, Asian and Egyptian collections and early American art.
-                  -TripAdvisor
-                </p>
+            </p></div>
+
+            <div id="MFA">
+              <h3 class="name">Museum of Fine Arts</h3>
+              <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
+              <p><span class="title" >Description:</span> 
+                Boston's oldest, largest and best-known art institution, the MFA houses one of the world's most comprehensive art collections and is renowned for its Impressionist paintings, Asian and Egyptian collections and early American art.
+                -TripAdvisor
+              </p>
               </div>
-            
-            
-            
+
+            <div id="HarvardArt">
+              <h3 class="name">Harvard Art Museums</h3>
+              <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
+              <p><span class="title" >Description:</span> 
+                The Harvard Art Museums, among the world's leading art institutions, comprise three museums (the Fogg, Busch-Reisinger, and Arthur M. Sackler Museums) all under one roof. Masterpieces among our more than a quarter million works include works by Vincent van Gogh, Claude Monet, Georgia O’Keefe, and Jackson Pollock; contemporary works by internationally recognized artists such as Kara Walker, Ai Weiwei, and Kerry James Marshall; and an array of remarkable objects from ancient cultures in the Mediterranean, Near East, and Far East. Our special exhibitions give us the chance to showcase an even wider range of works spanning diverse media, genres, and eras.
+                -TripAdvisor
+              </p>
+              </div>
+
+            <div id="ICA">
+              <h3 class="name">The Institute of Contemporary Art</h3>
+              <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
+              <p><span class="title" >Description:</span> 
+                This museum features cutting-edge contemporary painting, sculpture, architecture, film and photography.
+                -TripAdvisor
+              </p>
             </div>
+            
+            
+            <div id="BosCommon">
+              <h3 class="name">Boston Common</h3>
+              <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
+              <p><span class="title" >Description:</span> 
+                Whether it's a summer picnic in the grass or winter ice-skating on Frog Pond, Boston's oldest public park is the perfect escape from the bustle of the city.
+                -TripAdvisor
+                </p></div>
+
+
+            <div name="natural" id="PublicGarden" value="2">
+              <h3 class="name">Boston Public Garden</h3>
+              <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
+              <p><span class="title" >Description:</span> 
+                This Frederick Law Olmsted-designed park, famous for its Swan Boats, has over 600 varieties of trees and an ever-changing array of flowers. It is America's first public garden.
+                -TripAdvisor
+                </p>
+            </div>
+
   
         </article>
   
