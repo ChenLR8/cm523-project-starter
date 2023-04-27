@@ -161,6 +161,7 @@ article.recommedations{
     display: none;
 }
 
+
 h2{
     font-family: var(--title-font);
     font-size: var(--h2-font-size);
@@ -169,6 +170,7 @@ h2{
 p{
     font-size: var(--main-font-size);
 }
+
 legend{
     font-weight: 500;
     font-family: var(--title-font);
@@ -176,11 +178,40 @@ legend{
     font-size:var(--h3-font-size);
 }
 
+div.questions{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 fieldset{
     border: none;
-    background-color:blanchedalmond;
     padding: 2em;
     border-radius: 5px;
+    margin-bottom: 40px;
+
+}
+
+div.question_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    
+}
+div.btn{
+    grid-column: 1/span 2;
+    display: inline-flex;
+    justify-content: space-around;
+    gap: 30px;
+
+
+}
+
+button.next, button.back{
+    border: none;
+    font-size: var(--h3-font-size);
+    font-family: var(--title-font);
+    background-color: transparent;
+    margin-top: 10px;
 }
 
 
@@ -240,7 +271,7 @@ li.cardcontent{
     display:flex;
     flex-grow: 1;
     align-items: center;
-    transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: 0.3s ease-in-out;
 }
 
 li.cardcontent a{
@@ -248,7 +279,7 @@ li.cardcontent a{
 
 }
 li.cardcontent:hover{
-    transform: scale(1.035, 1.035);
+    transform: scale(1.03, 1.03);
 }
 
 div.card_container{
@@ -263,7 +294,7 @@ div.card_container{
 
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:620px) {
     div.card_container{
         min-width:470px;
     }
