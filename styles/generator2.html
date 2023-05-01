@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PUT A TITLE IN HERE -->
+    <title>This is the demo</title>
+    <!-- PUT A DESCRIPTION IN HERE -->
+    <meta name="description" content="describe content of the page here...." />
+    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
+    <link rel="stylesheet" href="styles.normalize.css" />
+    <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+    <!-- LINK TO YOUR STYLES -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <script src="scripts/scripts.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generator.html">Generate Your Plan</a></li>
+        <li><a href="resources.html">More Resources</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
+    </nav>
+    <main>
+        <article id="Generator">
+          <div class="questionnarire">
+            <fieldset>
+              <legend>Ready to generate your personalized Boston travel plan?</legend>
+              <div class="btn"> <button type ="button" class="next">Let's get started!</button></div>
+             
+            </fieldset>
+            <fieldset>
+              <legend class="qtitle">
+                How much time do you have for your one-day trip to Boston?
+              </legend>
+              <div class="question_container">
+                <input type="radio" name="start" id="early" value="4">
+                <label for="early">Morning and afternoon</label>
+                <input type="radio" name="start" id="mid" value="6">
+                <label for="mid">Afternoon and evening</label>
+                <input type="radio" name="start" id="fullday" value="8">
+                <label for="fullday">Full day</label>
+              </div>
+                <div class="btn">
+                  <button type ="button" class="back" >Back</button>
+                  <button type ="button" class="next">Next</button>
+              </div>
+             
+            </fieldset>
+
+            <fieldset>
+              <legend class="qtitle">
+                Which of the following travel styles makes you feel more comfortable?
+              </legend>
+              <div class="question_container">
+                <input type="radio" name="style" id="depth" value="2">
+                <label for="depth">Explore 1-2 spots in depth</label>
+                <input type="radio" name="style" id="variety" value="3">
+                <label for="variety">Visit all the spots I want to see within time frame</label>
+              </div>
+                <div class="btn">
+                  <button type ="button" class="back" >Back</button>
+                  <button type ="button" class="next">Next</button>
+              </div>
+ 
+             
+            </fieldset>
+
+
+
+
+          <fieldset>
+            <legend class="qtitle">
+              What type of the following attractions appeal to you most?</legend>
+            <div class="question_container">
+              <input type="radio" name="preferences" id="classic" value="Yes">
+              <label for="classic">Classic must-visit sites</label>
+              <input type="radio" name="preferences" id="niche" value="No">
+              <label for="niche">Off-beaten paths and hidden gems</label>
+            </div>
+              <div class="btn">
+                <button type ="button" class="back" >Back</button>
+                <button type ="button"class="next">Next</button>
+              </div>
+        
+
+        </fieldset>
+
+            <fieldset>
+              <legend class="qtitle">
+                Are you looking for family-friendly places?</legend>
+              <div class="question_container">
+                <input type="radio" name="family" id="family" value="Yes">
+                <label for="family">Yes</label>
+                <input type="radio" name="family" id="adult" value="No">
+                <label for="adult">No</label>
+              </div>
+                <div class="btn">
+                  <button type ="button" class="back" >Back</button>
+                  <button type ="button"class="next">Next</button>
+                </div>
+          
+
+          </fieldset>
+
+          <fieldset>
+            <legend class="qtitle">
+              What is your dinning plan? </legend>
+            <div class="question_container">
+              <input type="radio" name="dinning" id="breakfast" value="breakfast">
+              <label for="breakfast">Breakfast or brunch</label>
+              <input type="radio" name="dining" id="lunch" value="lunch">
+              <label for="lunch">Lunch</label>
+              <input type="radio" name="dinning" id="dinner" value="dinner">
+              <label for="dinner">Dinner</label>
+            </div>
+              <div class="btn">
+                <button type ="button" class="back" >Back</button>
+                <button type ="button" class="submit">Submit</button>
+              </div>
+         
+          </fieldset>
+
+            <fieldset>
+              <legend class="qtitle">
+                Is there a particular type of food you want to try? </legend>
+              <div class="question_container">
+                <input type="radio" name="cuisine" id="seafood" value="seafood">
+                <label for="seafood">Seafood</label>
+                <input type="radio" name="cuisine" id="italian" value="italian">
+                <label for="italian">Italian</label>
+                <input type="radio" name="cuisine" id="asian" value="asian">
+                <label for="asian">Asian</label>
+              </div>
+                <div class="btn">
+                  <button type ="button" class="back" >Back</button>
+                  <button type ="button" class="submit">Submit</button>
+                </div>
+           
+            </fieldset>
+

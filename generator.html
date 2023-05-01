@@ -17,148 +17,132 @@
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
     <script src="scripts/scripts.js" defer></script>
   </head>
-  <body class="otherpage">
-    <nav class="otherpage">
+  <body>
+    <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="generator.html">Generate Your Plan</a></li>
         <li><a href="resources.html">More Resources</a></li>
         <li><a href="project.html">Project</a></li>
-    </ul>
+      </ul>
     </nav>
     <main>
         <article id="Generator">
-          <div class="description">
-            <h2>Let's get started!</h2>
+          <div class="questionnarire">
+            <fieldset>
+              <legend>Ready to generate your personalized Boston travel plan?</legend>
+              <div class="btn"> <button type ="button" class="next">Let's get started!</button></div>
+             
+            </fieldset>
+
+            <fieldset>
+              <legend class="qtitle">
+                How much time do you have for your one-day trip to Boston?
+              </legend>
+              <div class="question_container">
+                <input type="radio" name="start" id="halfday" value="halfday">
+                <label for="halfday">Half day</label>
+                <input type="radio" name="start" id="fullday" value="fullday">
+                <label for="fullday">Full day</label>
+              </div>
+                <div class="btn">
+                  <button type ="button" class="back" >Back</button>
+                  <button type ="button" class="next">Next</button>
+              </div>
+            </fieldset>
+
+            
+            <fieldset>
+              <legend class="qtitle"> What is your main reason for visiting Boston?</legend>
+              <div class="question_container">
+                <input type="radio" name="category" id="typehistorical" value="HistoricalLandmarks">
+                <label for="typehistorical">Visiting historical landmarks</label>
+                <input type="radio" name="category" id="typeart" value="Art">
+                <label for="typeart">Enjoying art and culture scenes</label>
+                <input type="radio" name="category" id="typenature" value="Nature">
+                <label for="typenature">Embracing nature</label>
+                <input type="radio" name="category" id="typefun" value="Entertainment">
+                <label for="typefun">Attending entertainment activities</label>
+              </div>
+                <div class="btn">
+                  <button type ="button" class="back" >Back</button>
+                  <button type ="button" class="next">Next</button>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+              <legend class="qtitle">
+                How do you prefer to explore a new destination?
+              </legend>
+              <div class="question_container">
+                <input type="radio" name="explore" id="depth" value="depth">
+                <label for="depth">Explore 1-2 spots in depth</label>
+                <input type="radio" name="explore" id="variety" value="variety">
+                <label for="variety">Explore various sites if possible</label>
+              </div>
+                <div class="btn">
+                  <button type ="button" class="back" >Back</button>
+                  <button type ="button" class="next">Next</button>
+              </div>            
+            </fieldset>
+
+            <fieldset>
+              <legend class="qtitle">
+                What is your ideal travel style?
+              </legend>
+              <div class="question_container">
+                <input type="radio" name="style" id="relaxing" value="personal">
+                <label for="relaxing">Relaxing and personal</label>
+                <input type="radio" name="style" id="lively" value="lively">
+                <label for="lively">Lively and interactive</label>
+              </div>
+                <div class="btn">
+                  <button type ="button" class="back" >Back</button>
+                  <button type ="button" class="next">Next</button>
+              </div>            
+            </fieldset>
+
+            <fieldset>
+              <legend class="qtitle">
+                What type of the following attractions appeal to you most?</legend>
+              <div class="question_container">
+                <input type="radio" name="preferences" id="classic" value="Yes">
+                <label for="classic">Classic must-visit places</label>
+                <input type="radio" name="preferences" id="niche" value="No">
+                <label for="niche">Off-beaten paths and hidden gems</label>
+              </div>
+                <div class="btn">
+                  <button type ="button" class="back" >Back</button>
+                  <button type ="button"class="next">Next</button>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="qtitle">
+                  Are you looking for family-friendly places?</legend>
+                <div class="question_container">
+                  <input type="radio" name="family" id="family" value="family">
+                  <label for="family">Yes</label>
+                  <input type="radio" name="family" id="adult" value="adult">
+                  <label for="adult">No</label>
+                </div>
+                  <div class="btn">
+                    <button type ="button" class="back" >Back</button>
+                    <button type ="button"class="submit">Submit</button>
+                  </div>
+          
+            </fieldset>
+
 
           </div>
-        
-
-            <fieldset>
-              <legend class="qtitle">
-                What time of day do you prefer to start your activities?
-              </legend>
-              <div class="question_container">
-                <input type="radio" name="start" id="early" value="4">
-                <label for="early">Early morning</label>
-                <input type="radio" name="start" id="mid" value="6">
-                <label for="mid">Mid morning</label>
-                <input type="radio" name="start" id="noon" value="8">
-                <label for="noon">Afternoon</label>
-                <input type="radio" name="start" id="night" value="9">
-                <label for="night">Evening</label>
-                <div class="btn">
-                  <button class="next">Next</button>
-              </div>
-            </div>  
-             
-            </fieldset>
-
-            <fieldset>
-              <legend class="qtitle">
-                How long would you like your one-day trip to be?
-              </legend>
-              <div class="question_container">
-                <input type="radio" name="time" id="four" value="4">
-                <label for="four">Less than 4 hours</label>
-                <input type="radio" name="time" id="six" value="6">
-                <label for="six">4-6 hours</label>
-                <input type="radio" name="time" id="eight" value="8">
-                <label for="eight">6-8 hours</label>
-                <input type="radio" name="time" id="morethaneight" value="9">
-                <label for="morethaneight">More than 8 hours</label>
-                <div class="btn">
-                  <button class="back" >Back</button>
-                  <button class="next">Next</button>
-              </div>
-            </div>  
-             
-            </fieldset>
-            
-  
-            <fieldset>
-              <legend class="qtitle"> What are you looking for in Boston? (multiple choices)</legend>
-              <div class="question_container">
-                <input type="checkbox" name="category" id="typehistorical" value="HistoricalLandmarks">
-                <label for="typehistorical">Historical landmarks</label>
-                <input type="checkbox" name="category" id="typeart" value="ArtandMuseum">
-                <label for="typeart">Art and cultural experiences</label>
-                <input type="checkbox" name="category" id="typenature" value="Naturalviews">
-                <label for="typenature">Nature and scenic views</label>
-                <input type="checkbox" name="category" id="typefun" value="Entertainment">
-                <label for="typefun">Sports and outdoor entertainment</label>
-                <div class="btn">
-                  <button class="back" >Back</button>
-                  <button class="next">Next</button>
-                </div>
-             </div>
-
-          </fieldset>
-
-
-            <fieldset>
-              <legend class="qtitle">
-                Are you looking for family-friendly places?</legend>
-              <div class="question_container">
-                <input type="radio" name="family" id="family" value="Yes">
-                <label for="family">Yes</label>
-                <input type="radio" name="family" id="adult" value="No">
-                <label for="adult">No</label>
-                <div class="btn">
-                  <button class="back" >Back</button>
-                  <button class="next">Next</button>
-                </div>
-            </div>
-
-          </fieldset>
-
-
-            <fieldset>
-              <legend class="qtitle">
-                What type of transport do you prefer for your tour?</legend>
-              <div class="question_container">
-                <input type="radio" name="transport" id="walk" value="walk">
-                <label for="walk">Walking</label>
-                <input type="radio" name="transport" id="bike" value="bike">
-                <label for="bike">Bicycle</label>
-                <input type="radio" name="transport" id="car" value="car">
-                <label for="car">Car or van</label>
-                <input type="radio" name="transport" id="publictrans" value="publictrans">
-                <label for="publictrans">Public transportation</label>
-                <div class="btn">
-                  <button class="back" >Back</button>
-                  <button class="next">Next</button>
-                </div>
-            </div>
-            </fieldset>
-            
-
-            <fieldset>
-              <legend class="qtitle">
-                What type of cuisine are you interested in trying during your trip? </legend>
-              <div class="question_container">
-                <input type="radio" name="cuisine" id="seafood" value="seafood">
-                <label for="seafood">Seafood</label>
-                <input type="radio" name="cuisine" id="italian" value="italian">
-                <label for="italian">Italian</label>
-                <input type="radio" name="cuisine" id="american" value="american">
-                <label for="american">American</label>
-                <input type="radio" name="cuisine" id="asian" value="asian">
-                <label for="asian">Asian</label>
-                <div class="btn">
-                  <button class="back" >Back</button>
-                  <button class="next">Next</button>
-                </div>
-              </div>
-            </fieldset>
-
-
-         
   
         </article>
 
-        <article class="recommedations">
+        <article>
+          <h2 class="recommendations">Your one-day travel plan is</h2>
+          <div class="spotscontainer">
             <div id="FreedomTrail">
+              <img class="recommendations" src="/images/Boston-Old-State-House.jpg" alt="antique church by the road">
               <h3 class="name">Freedom Trail</h3>
               <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
               <p><span class="title" >Description:</span> 
@@ -169,16 +153,26 @@
             </div>
            
             <div id="JFK">
+              <img src="/images/john-f-kennedy-presidential.jpg" alt="beautiful white architecture under blue sky" class="recommendations">
               <h3 class="name">John F. Kennedy Presidential Museum & Library</h3>
               <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
               <p><span class="title" >Description:</span> 
-              <p>
-                Relive the Kennedy era in this dynamic combination museum and library, where your visit starts with a short film and then leaves you on your own to explore a series of fascinating exhibits, including the Kennedy-Nixon debate, the Cuban Missile Crisis, the space program, 1960s campaign paraphernalia and displays about Jacqueline and other Kennedy family members. The striking, I.M. Pei-designed building overlooks the water and the Boston skyline.
+              Relive the Kennedy era in this dynamic combination museum and library, where your visit starts with a short film and then leaves you on your own to explore a series of fascinating exhibits, including the Kennedy-Nixon debate, the Cuban Missile Crisis, the space program, 1960s campaign paraphernalia and displays about Jacqueline and other Kennedy family members. The striking, I.M. Pei-designed building overlooks the water and the Boston skyline.
                 -TripAdvisor
               </p>
               </div>
 
+            <div id="USS">
+                <img src="/images/uss.jpg" alt="" class="recommendations">
+                <h3 class="name">USS Constitution Museum</h3>
+                <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
+                <p><span class="title" >Description:</span> 
+                  At the USS Constitution Museum you don't just learn about history, you EXPERIENCE it! Furl a a sail, fire a cannon, and scrub the decks to learn what life was like at sea over 200 years ago. Located across from the ship in the historic Charlestown Navy Yard. The Museum is private non-profit Museum and is operated separately from USS Constitution (the Ship).
+                  -TripAdvisor
+            </p></div>
+
             <div id="Isabella">
+              <img src="/images/Story_About_Construction_02.jpg" alt="Antique plant atrium" class="recommendations">
               <h3 class="name">Isabella Stewart Gardner Museum</h3>
               <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
               <p><span class="title" >Description:</span> 
@@ -187,6 +181,7 @@
             </p></div>
 
             <div id="MFA">
+              <img src="/images/MFA.jpg" alt="art galleries inside" class="recommendations">
               <h3 class="name">Museum of Fine Arts</h3>
               <p><span class="title" >Suggestion durations:</span> 2-3 hours</p>
               <p><span class="title" >Description:</span> 
@@ -196,6 +191,7 @@
               </div>
 
             <div id="HarvardArt">
+              <img src="/images/mainimage_gallery_harvard.jpg" alt="art gallery corridor with marble sculptures" class="recommendations">
               <h3 class="name">Harvard Art Museums</h3>
               <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
               <p><span class="title" >Description:</span> 
@@ -203,18 +199,10 @@
                 -TripAdvisor
               </p>
               </div>
-
-            <div id="ICA">
-              <h3 class="name">The Institute of Contemporary Art</h3>
-              <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
-              <p><span class="title" >Description:</span> 
-                This museum features cutting-edge contemporary painting, sculpture, architecture, film and photography.
-                -TripAdvisor
-              </p>
-            </div>
             
             
             <div id="BosCommon">
+              <img src="/images/bospar-boston-common.jpg" alt="" class="recommendations">
               <h3 class="name">Boston Common</h3>
               <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
               <p><span class="title" >Description:</span> 
@@ -224,6 +212,7 @@
 
 
             <div id="PublicGarden">
+              <img src="/images/bostoncommon.jpg" alt="park in fall" class="recommendations">
               <h3 class="name">Boston Public Garden</h3>
               <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
               <p><span class="title" >Description:</span> 
@@ -233,6 +222,7 @@
             </div>
 
             <div id="Fenway">
+              <img src="/images/fenwaypark.jpg" alt="" class="recommendations">
               <h3 class="name">Fenway Park</h3>
               <p><span class="title" >Suggestion durations:</span> More than 3 hours</p>
               <p><span class="title" >Description:</span> 
@@ -242,15 +232,17 @@
             </div>
 
             <div id="TD">
+              <img src="/images/boston-td-garden.jpg" alt="crowded stadium" class="recommendations">
               <h3 class="name">TD Garden</h3>
               <p><span class="title" >Suggestion durations:</span> More than 3 hours</p>
               <p><span class="title" >Description:</span> 
-                As New England's largest sports and entertainment arena, TD Garden is the home of the storied NHL’s Boston Bruins and NBA’s Boston Celtics franchises and hosts over 3.5 million people a year at its world-renowned concerts, sporting events, family shows, wrestling, and ice shows.
+                As New England's largest sports and entertainment arena, TD Garden is the home of the storied NHL's Boston Bruins and NBA's Boston Celtics franchises and hosts over 3.5 million people a year at its world-renowned concerts, sporting events, family shows, wrestling, and ice shows.
                 -TripAdvisor
                 </p>
             </div>
 
             <div id="NewEngland">
+              <img src="/images/newengland.jpg" alt="fish in green water" class="recommendations">
               <h3 class="name">New England Aquarium</h3>
               <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
               <p><span class="title" >Description:</span> 
@@ -261,6 +253,7 @@
 
 
             <div id="Children">
+              <img src="/images/Boston-Seaport-Places_Boston-Childrens-Museum_01_-¬Karin_Hansen.jpg" alt="modern museum by sea" class="recommendations">
               <h3 class="name">Boston Children's Museum</h3>
               <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
               <p><span class="title" >Description:</span> 
@@ -270,6 +263,7 @@
             </div>
 
             <div id="TeaParty">
+              <img src="/images/dump-the-tea-into-the.jpg" alt="people playing on the boat" class="recommendations">
               <h3 class="name">Boston Tea Party Ships & Museum</h3>
               <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
               <p><span class="title" >Description:</span> 
@@ -279,16 +273,81 @@
             </div>
 
             <div id="Arnold">
+              <img src="/images/AA-Beech-Path-Spring-Jon-Hetman.jpg" alt="spring path with blossom" class="recommendations">
               <h3 class="name">Arnold Arboretum</h3>
               <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
               <p><span class="title" >Description:</span> 
-                The Arnold Arboretum is another place of beauty within the city. While America's oldest public arboretum is a popular destination among tourists and locals alike, you won’t feel crowded here. The 265 acres of sprawling trees, trails, shrubs, and vines will provide the breath of fresh air you were looking for.
+                The Arnold Arboretum is another place of beauty within the city. While America's oldest public arboretum is a popular destination among tourists and locals alike, you won't feel crowded here. The 265 acres of sprawling trees, trails, shrubs, and vines will provide the breath of fresh air you were looking for.
                 -TripAdvisor
                 </p>
             </div>
 
+            <div id="Library">
+              <img src="images/publiclib.jpg" alt="" class="recommendations">
+              <h3 class="name">Boston Public Library</h3>
+              <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
+              <p><span class="title" >Description:</span> 
+                The main branch of the Boston Public Library opened in 1852 as the first free, publicly-funded municipal library in America. The library, which is listed on the National Register of Historic Places, houses over 20 million items. Enjoy a free tour of the building to learn about its history and marvel at the treasured artworks and architecture that spans three centuries. 
+                -TripAdvisor
+            </p></div>
+
+            <div id="Bookshop">
+              <img src="/images/bookstore.jpg" alt="industrial-style outdoor book bazaar" class="recommendations">
+              <h3 class="name">Brattle Book Shop of Boston</h3>
+              <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
+              <p><span class="title" >Description:</span> 
+                The country's oldest antiquarian bookstore, the Brattle has over 200,000 used and out-of-print books, magazines and more.
+                -TripAdvisor
+            </p></div>
+
+            <div id="SoWa">
+              <img src="/images/sowa.jpg" alt="" class="recommendations">
+              <h3 class="name">SoWa Art + Design District</h3>
+              <p><span class="title" >Suggestion durations:</span> More than 3 hours</p>
+              <p><span class="title" >Description:</span> 
+                If Boston was a person, SoWa would be its creative side. Its independent streak. Its curiosity. Because here imagination has created a corner of the city filled with the eclectic and the unexpected. Where one-of-a-kind restaurants, galleries, and small business are run by one-of-a-kind people. Where food is sold by farmers, beer sold from barns, and art is sold where art is made. People don’t just visit SoWa. They live it. They taste it. They experience it. Explore your creative side. Explore SoWa. Originally derived from a shortening of "South of Washington," SoWa spans the area from East Brookline Street to East Berkeley Street and from Shawmut Ave to Albany Street.
+                -TripAdvisor
+            </p></div>
+
+            <div id="Greenway">
+              <img src="/images/rose.jpg" alt="" class="recommendations">
+              <h3 class="name">Rose Kennedy Greenway</h3>
+              <p><span class="title" >Suggestion durations:</span> 1-2 hours</p>
+              <p><span class="title" >Description:</span> 
+                The Rose Kennedy Greenway, a roof garden atop a highway tunnel, is a contemporary public park in the heart of Boston. The non-profit Greenway Conservancy maintains, programs, finances, and improves the 1.5-mile Greenway on behalf of the public. The Greenway welcomes millions of visitors annually, and the Conservancy has won numerous awards for our organic landscape care, public art, and programming.
+                -TripAdvisor
+            </p></div>
+
+
+
+            <div id="Tatte">
+              <h3 class="name">Tatte</h3>
+              <p><span class="title" >Type:</span> American brunch</p>
+              <p><span class="title" >Description:</span> 
+                The Rose Kennedy Greenway, a roof garden atop a highway tunnel, is a contemporary public park in the heart of Boston. The non-profit Greenway Conservancy maintains, programs, finances, and improves the 1.5-mile Greenway on behalf of the public. The Greenway welcomes millions of visitors annually, and the Conservancy has won numerous awards for our organic landscape care, public art, and programming.
+                -TripAdvisor
+            </p></div>
+
+            <div id="Italian">
+              <h3 class="name">Tatte</h3>
+              <p><span class="title" >Type:</span> Italian</p>
+              <p><span class="title" >Description:</span> 
+                The Rose Kennedy Greenway, a roof garden atop a highway tunnel, is a contemporary public park in the heart of Boston. The non-profit Greenway Conservancy maintains, programs, finances, and improves the 1.5-mile Greenway on behalf of the public. The Greenway welcomes millions of visitors annually, and the Conservancy has won numerous awards for our organic landscape care, public art, and programming.
+                -TripAdvisor
+            </p></div>
+
+            <div id="ClearFlour">
+              <h3 class="name">Clear Flour Bread</h3>
+              <p><span class="title" >Type:</span> Desserts and bakery</p>
+              <p><span class="title" >Description:</span> 
+                The Rose Kennedy Greenway, a roof garden atop a highway tunnel, is a contemporary public park in the heart of Boston. The non-profit Greenway Conservancy maintains, programs, finances, and improves the 1.5-mile Greenway on behalf of the public. The Greenway welcomes millions of visitors annually, and the Conservancy has won numerous awards for our organic landscape care, public art, and programming.
+                -TripAdvisor
+            </p></div>
+
+            
+
          
-  
+          </div>
         </article>
   
 
