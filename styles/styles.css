@@ -264,6 +264,17 @@ h2{
 
 
 /*generator*/
+@media screen and (max-width:550px){
+    legend.qtitle{
+        font-size: 20px;
+    }
+
+    div.questionnarire{
+        gap:7px;
+    }
+
+    
+}
 
 h2.recommendations{
     text-align: center;
@@ -295,7 +306,6 @@ fieldset{
     padding: 2rem;
     border: 1px solid var(--title-color-alt);
     max-width: 700px;
-    max-height: 80vh;
 
 
 }
