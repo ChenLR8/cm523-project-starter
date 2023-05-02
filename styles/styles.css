@@ -131,6 +131,7 @@ header p a{
     header div.container{
         gap:30px;
     }
+
 }
 
 /*nav*/
@@ -219,7 +220,7 @@ img.nav{
       display:none;
       flex-direction: column;
       position: absolute;
-      top: 62.5px;
+      top: 60px;
       left: 0;
       width: 100%;
       background-color: var(--title-color-alt);
@@ -263,7 +264,17 @@ h2{
 
 
 /*generator*/
+@media screen and (max-width:550px){
+    legend.qtitle{
+        font-size: 20px;
+    }
 
+    div.questionnarire{
+        gap:7px;
+    }
+
+    
+}
 h2.recommendations{
     text-align: center;
 }
@@ -329,7 +340,6 @@ div.question_container{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
