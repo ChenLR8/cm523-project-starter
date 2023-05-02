@@ -31,7 +31,7 @@ body {
     line-height: 1.5;
     font-family: var(--main-font);
     font-weight: var(--main-font-weight);
-    margin-top: 0;
+    margin:0;
 
 }
 
@@ -53,7 +53,7 @@ header div.container{
     gap: 50px;
     align-items: center;
     place-content: center;
-    background-image:url("/images/skyline-02.png"); 
+    background-image:url("images/skyline-02.png"); 
     background-position: bottom;
     background-size: cover;
     height: 100vh;
@@ -115,33 +115,49 @@ header p a{
 
 
 /*nav*/
+
 nav{
     text-align: center;
     position: sticky;
     top: 0;
     width: 100%;
-
-    margin: 0;
-    padding:0;
     z-index:2;
     background-color: var(--background-color);
+    padding: 0.2rem 2rem;
+    display:flex;
+    border-bottom: 1px solid var(--title-color-alt);
+    justify-content: space-between;
+    align-items: center;
+}
 
+div.navicon{
+    padding:1vh 1vw;
+}
+img.nav{
+    height:100%;
 }
 
 nav ul{
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    font-size: 25px;
-    padding-left: 0;
-    justify-content: space-around;
+    font-size: var(--h3-font-size);
+    padding-left: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:0;
 
-    
+
 }
 
 nav ul li{
     font-size: var(--cover-font-size);
+    margin-right: 2rem;
     list-style: none;
+
+}
+
+nav ul li:last-child{
+    margin-right: 0;
+
 }
 
 nav ul li a{
@@ -152,20 +168,65 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: var(--link-color);
+    color: var(--link-color)
 }
 
 img.nav{
-    width: 40px;
+    width: 50px;
 
 }
-a.inline{
-    color: black
+
+
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background-color: var(--title-color-alt);
+    margin: 5px;
+
+}
+.hamburger{
+    display: none;
 }
 
-a.inline:hover{
-    color:var(--link-color)
-}
+@media screen and (max-width: 688px) {
+
+    .hamburger{
+      display: block;
+      cursor: pointer;
+    }
+  
+    nav ul{
+      display:none;
+      flex-direction: column;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      width: 100%;
+      background-color: var(--title-color-alt);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul li a{
+        color: white;
+    }
+
+    nav ul li a:hover{
+        color: var(--title-color);
+    }
+  
+
+    nav ul li{
+      margin: 1rem 0;
+    }
+  
+    nav ul.show{
+      display:flex;
+    }
+  
+  }
+
+  
 /*
 footer p{
     font-family: var(--title-font);
@@ -444,6 +505,7 @@ div.filecontainer{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     align-items: center;
+    margin-top: 2rem;
 }
 
 a.file{
@@ -471,10 +533,7 @@ article.project{
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    display: grid;
-    place-content: center;
-    height: 80vh;
-    row-gap: 20px;
+
 
 }
 
@@ -487,6 +546,26 @@ div.bg img{
 
 }
 
+footer div{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0 16px;
+}
+footer{
+    background-color: #eda12c;
+    position:fixed;
+    bottom: 0;
+    width:100%
+}
+
+a.inline{
+    color: black
+}
+
+a.inline:hover{
+    color:white;
+}
 /*
 @media screen and (max-width:620px) {
     div.card_container{

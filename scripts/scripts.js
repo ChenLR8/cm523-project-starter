@@ -10,6 +10,20 @@ const Style = Array.from(document.getElementsByName('style'));
 const Preferences = Array.from(document.getElementsByName('preferences'));
 const Family = Array.from(document.getElementsByName('family'));
 
+//NAV BAR//
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('nav ul');
+const links = document.querySelectorAll('nav ul li');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  links.forEach(link => {
+    link.classList.toggle('fade');
+  });
+});
+
+
+
 /*const spotscontainer =document.querySelector('.spotscontainer');*/
 const h2= document.querySelector('h2.recommendations');
 const FreedomTrail = document.querySelector('#FreedomTrail')
