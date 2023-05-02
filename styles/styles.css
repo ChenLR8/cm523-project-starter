@@ -294,6 +294,7 @@ fieldset{
     padding: 2rem;
     border: 1px solid var(--title-color-alt);
     max-width: 700px;
+    max-height: 80vh;
 
 
 }
@@ -426,6 +427,10 @@ img.recommendations{
     object-position: center;
 }
 
+h2.recommendations{
+    padding-top: 0.5rem;
+}
+
 /**Resources**/
 article.resources{
     max-width: 900px;
@@ -515,7 +520,6 @@ img.card{
     object-fit: cover;
     position: absolute;
     top:0;
-
     z-index: -1;
 
 }
@@ -523,7 +527,7 @@ img.card{
 /*this is for project page*/
 div.filecontainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
     align-items: center;
     margin-top: 2rem;
@@ -556,6 +560,7 @@ article.project{
     margin-right: auto;
 
 
+
 }
 
 div.bg{
@@ -575,9 +580,7 @@ footer div{
     padding:0 16px;
 }
 footer{
-    background-color: #eda12c;
-    position:fixed;
-    bottom: 0;
+
     width:100%
 }
 
@@ -586,7 +589,7 @@ a.inline{
 }
 
 a.inline:hover{
-    color:white;
+    color:var(--link-color)
 }
 /*
 @media screen and (max-width:620px) {
