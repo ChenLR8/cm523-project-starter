@@ -9,7 +9,7 @@ const Explore = Array.from(document.getElementsByName('explore'));
 const Style = Array.from(document.getElementsByName('style'));
 const Preferences = Array.from(document.getElementsByName('preferences'));
 const Family = Array.from(document.getElementsByName('family'));
-
+const nav =document.querySelector('nav');
 //NAV BAR//
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('nav ul');
@@ -138,12 +138,24 @@ function getPlan(){
     console.log(plan);
     getRecommendations(plan);
 }
+
+//let it scroll to the recommendation when submitted//
+const offset = nav.offsetHeight;
+
 submitbtn.addEventListener('click', function() {
     getPlan();
-    window.scrollTo({ top: 600, behavior: 'smooth' });
+    scrollToRecommendations();
   });
+  
+  function scrollToRecommendations() {
+    const position = h2.offsetTop - offset;
+  window.scrollTo({
+    top: position,
+    behavior: 'smooth'
+  });
+  }
+  
 
-//i know it;s not even logical...that's all i can get//
 function getRecommendations(plan){
     console.log('getRecommendations');
     /*spotscontainer.forEach(recommendation => {
