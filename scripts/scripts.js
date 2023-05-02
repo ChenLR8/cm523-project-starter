@@ -9,16 +9,48 @@ const Explore = Array.from(document.getElementsByName('explore'));
 const Style = Array.from(document.getElementsByName('style'));
 const Preferences = Array.from(document.getElementsByName('preferences'));
 const Family = Array.from(document.getElementsByName('family'));
-const viewbtn = document.querySelector('.viewplan');
-const spotscontainer =document.querySelectorAll('div.spotscontainer');
+
+/*const spotscontainer =document.querySelector('.spotscontainer');*/
 const h2= document.querySelector('h2.recommendations');
 const FreedomTrail = document.querySelector('#FreedomTrail')
-
-spotscontainer.forEach(recommendation => {
-    recommendation.style.display = 'none';
-  });
+const JFK= document.querySelector('#JFK');
+const USS=document.querySelector('#USS');
+const Isabella = document.querySelector('#Isabella');
+const MFA = document.querySelector('#MFA');
+const HarvardArt = document.querySelector('#HarvardArt');
+const BosCommon =document.querySelector('#BosCommon');
+const PublicGarden = document.querySelector('#PublicGarden');
+const Fenway = document.querySelector('#Fenway');
+const TD =document.querySelector('#TD');
+const NewEngland = document.querySelector('#NewEngland');
+const Children =document.querySelector('#Children');
+const TeaParty = document.querySelector('#TeaParty');
+const Arnold = document.querySelector('#Arnold');
+const Library = document.querySelector('#Library');
+const Bookshop = document.querySelector('#Bookshop');
+const SoWa = document.querySelector('#SoWa');
+const Greenway =document.querySelector('#Greenway');
 
 h2.style.display='none';
+FreedomTrail.style.display='none';
+JFK.style.display='none';
+USS.style.display='none';
+Isabella.style.display='none';
+MFA.style.display='none';
+HarvardArt.style.display='none';
+BosCommon.style.display='none';
+PublicGarden.style.display='none';
+Fenway.style.display='none';
+TD.style.display='none';
+NewEngland.style.display='none';
+Children.style.display='none';
+TeaParty.style.display='none';
+Arnold.style.display='none';
+Bookshop.style.display='none';
+SoWa.style.display='none';
+Greenway.style.display='none';
+Library.style.display='none';
+
 
 const plan={
     Time: null,
@@ -87,480 +119,115 @@ function getPlan(){
         };});
     Family.forEach(item=>{
         if(item.checked){
-            plan.Family = item.value;
+            plan.FamilyPlace = item.value;
         };});
     console.log(plan);
     getRecommendations(plan);
 }
-submitbtn.addEventListener('click',getPlan)
+submitbtn.addEventListener('click', function() {
+    getPlan();
+    window.scrollTo({ top: 600, behavior: 'smooth' });
+  });
 
+//i know it;s not even logical...that's all i can get//
 function getRecommendations(plan){
-    spotscontainer.forEach(recommendation => {
+    console.log('getRecommendations');
+    /*spotscontainer.forEach(recommendation => {
         recommendation.style.display = 'none';
-      });
-    if (plan === halfHistory1){
-        FreedomTrail.style.display='block';
+      });console.log(plan);
+      console.log(plan.Time + " plan");
+      console.log(halfHistory1.Time + " halfHistory");*/
 
-        
-    }
+      if (plan.Category === category.history && plan.Preferences=== preferences.classic && plan.FamilyPlace === family.adult) {
+        console.log('true');
+        h2.style.display = 'block';
+        FreedomTrail.style.display = 'block';
+        JFK.style.display = 'block';
+      }
+
+      if (plan.Category === category.history && plan.FamilyPlace === family.family) {
+        console.log('true');
+        h2.style.display = 'block';
+        TeaParty.style.display = 'block';
+        USS.style.display = 'block';
+      }
+      
+      if (plan.Category === category.art && plan.Preferences === preferences.classic&& plan.FamilyPlace === family.adult) {
+        h2.style.display = 'block';
+        Isabella.style.display = 'block';
+        MFA.style.display = 'block';
+      }
+
+      if (plan.Category === category.art && plan.FamilyPlace === family.family) {
+        h2.style.display = 'block';
+        Children.style.display = 'block';
+        NewEngland.style.display = 'block';
+      }
+
+      if (plan.Category === category.art && plan.Preferences === preferences.niche&&plan.FamilyPlace === family.adult) {
+        h2.style.display = 'block';
+        Isabella.style.display = 'block';
+        Bookshop.style.display = 'block';
+      }
+      if (plan.Time === fullday.Time && plan.Category === category.art && plan.Preferences === preferences.classic) {
+        h2.style.display = 'block';
+        HarvardArt.style.display = 'block';
+      }
+      if (plan.Category === category.nature && plan.Style === style.personal) {
+        h2.style.display = 'block';
+        Arnold.style.display = 'block';
+        PublicGarden.style.display = 'block';
+      }
+      if (plan.Category === category.nature && plan.Style === style.lively) {
+        h2.style.display = 'block';
+        Greenway.style.display = 'block';
+        BosCommon.style.display = 'block';
+      }
+     
+      if (plan.Category === category.entertainment) {
+        h2.style.display = 'block';
+        Fenway.style.display = 'block';
+        TD.style.display = 'block';
+      }
+      
 }
 //user type//
 //halfday//
 //classic_history_depth_personal_family_seafood//
-const halfHistory1={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'depth',
-    Style: 'personal',
-    Preferences: 'classic',
-    FamilyPlace: 'Yes',
 
+const fullday={
+    Time:'fullday',
 }
-//freedom trail JFK//
 
-//classic_history_depth_lively_family_seafood//
-const halfHistory2={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'depth',
-    Style: 'lively',
-    Preferences: 'classic',
-    FamilyPlace: 'Yes',
+const halfday={
+    Time:'halfday',
 }
-//USS TEA//
-//classic_history_depth_personal_adult_seafood//
-const halfHistory3={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'depth',
-    Style: 'personal',
-    Preferences: 'classic',
-    FamilyPlace: 'No',
 
-
-}
-//classic_history_depth_lively_adult_seafood//
-const halfHistory4={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'depth',
-    Style: 'lively',
-    Preferences: 'classic',
-    FamilyPlace: 'No',
- 
-
-}
-//classic_history_variety_personal_family_seafood//
-const halfHistory5={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'variety',
-    Style: 'personal',
-    Preferences: 'classic',
-    FamilyPlace: 'Yes',
-
-
-}
-//classic_history_variety_personal_adult_seafood//
-
-const halfHistory6={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'variety',
-    Style: 'personal',
-    Preferences: 'classic',
-    FamilyPlace: 'No',
-
-
-}
-//classic_history_variety_lively_family_seafood//
-
-const halfHistory7={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'variety',
-    Style: 'lively',
-    Preferences: 'classic',
-    FamilyPlace: 'Yes',
-    
-}
-//classic_history_variety_lively_adult_seafood//
-const halfHistory8={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'variety',
-    Style: 'lively',
-    Preferences: 'classic',
-    FamilyPlace: 'No',
-
-}
-//niche_history_depth_personal_family_seafood//
-const halfHistoryN1={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'depth',
-    Style: 'personal',
-    Preferences: 'niche',
-    FamilyPlace: 'Yes',
-
-}
-//niche_history_depth_lively_adult_seafood//
-const halfHistoryN2={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'depth',
-    Style: 'lively',
-    Preferences: 'niche',
-    FamilyPlace: 'No',
-
-}
-//niche_history_depth_personal_adult_seafood//
-
-const halfHistoryN3={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'depth',
-    Style: 'personal',
-    Preferences: 'niche',
-    FamilyPlace: 'No',
-
-}
-//niche_history_depth_lively_family_seafood//
-const halfHistoryN4={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'depth',
-    Style: 'lively',
-    Preferences: 'niche',
-    FamilyPlace: 'Yes',
-}
-//niche_history_variety_personal_family_seafood//
-const halfHistoryN5={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'variety',
-    Style: 'personal',
-    Preferences: 'niche',
-    FamilyPlace: 'Yes',
-}
-//niche_history_variety_personal_adult_seafood//
-const halfHistoryN6={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'variety',
-    Style: 'personal',
-    Preferences: 'niche',
-    FamilyPlace: 'No',
-}
-//niche_history_variety_lively_family_seafood//
-const halfHistoryN7={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'variety',
-    Style: 'lively',
-    Preferences: 'niche',
-    FamilyPlace: 'Yes',
-}
-//niche_history_variety_lively_adult_seafood//
-const halfHistoryN8={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'variety',
-    Style: 'lively',
-    Preferences: 'niche',
-    FamilyPlace: 'No',
-}
-//Art//
-const halfArt1={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'depth',
-    Style: 'personal',
-    Preferences: 'classic',
-    FamilyPlace: 'Yes',
-
+const category = {
+    history:'HistoricalLandmarks',
+    art: 'Art',
+    nature:'Nature',
+    entertainment:'Entertainment',
 
 }
 
-//classic_Art_depth_lively_family_seafood//
-const halfArt2={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'depth',
-    Style: 'lively',
-    Preferences: 'classic',
-    FamilyPlace: 'Yes',
 
-
-}
-//classic_Art_depth_personal_adult_seafood//
-const halfArt3={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'depth',
-    Style: 'personal',
-    Preferences: 'classic',
-    FamilyPlace: 'No',
-
-
-}
-//classic_history_depth_lively_adult_seafood//
-const halfArt4={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'depth',
-    Style: 'lively',
-    Preferences: 'classic',
-    FamilyPlace: 'No',
- 
-
-}
-//classic_Art_variety_personal_family_seafood//
-const halfArt5={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'variety',
-    Style: 'personal',
-    Preferences: 'classic',
-    FamilyPlace: 'Yes',
-
-
-}
-//classic_Art_variety_personal_adult_seafood//
-
-const halfArt6={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'variety',
-    Style: 'personal',
-    Preferences: 'classic',
-    FamilyPlace: 'No',
-
-
-}
-//classic_history_variety_lively_family_seafood//
-
-const halfArt7={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'variety',
-    Style: 'lively',
-    Preferences: 'classic',
-    FamilyPlace: 'Yes',
-    
-}
-//classic_history_variety_lively_adult_seafood//
-const halfArt8={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'variety',
-    Style: 'lively',
-    Preferences: 'classic',
-    FamilyPlace: 'No',
-
-}
-//niche_history_depth_personal_family_seafood//
-const halfArtN1={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'depth',
-    Style: 'personal',
-    Preferences: 'niche',
-    FamilyPlace: 'Yes',
-
-}
-//niche_history_depth_lively_adult_seafood//
-const halfArtN2={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'depth',
-    Style: 'lively',
-    Preferences: 'niche',
-    FamilyPlace: 'No',
-
-}
-//niche_history_depth_personal_adult_seafood//
-
-const halfArtN3={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'depth',
-    Style: 'personal',
-    Preferences: 'niche',
-    FamilyPlace: 'No',
-
-}
-//niche_history_depth_lively_family_seafood//
-const halfArtN4={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'depth',
-    Style: 'lively',
-    Preferences: 'niche',
-    FamilyPlace: 'Yes',
-}
-//niche_history_variety_personal_family_seafood//
-const halfArtN5={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'variety',
-    Style: 'personal',
-    Preferences: 'niche',
-    FamilyPlace: 'Yes',
-}
-//niche_history_variety_personal_adult_seafood//
-const halfArtN6={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'variety',
-    Style: 'personal',
-    Preferences: 'niche',
-    FamilyPlace: 'No',
-}
-//niche_history_variety_lively_family_seafood//
-const halfArtN7={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'variety',
-    Style: 'lively',
-    Preferences: 'niche',
-    FamilyPlace: 'Yes',
-}
-//niche_history_variety_lively_adult_seafood//
-const halfArtN8={
-    Time: 'halfday',
-    Category: 'Art',
-    Explore: 'variety',
-    Style: 'lively',
-    Preferences: 'niche',
-    FamilyPlace: 'No',
-}
-//Nature//
-
-//classic_nature_depth_personal_family_seafood//
-//classic_nature_depth_lively_family_seafood//
-//classic_nature_depth_personal_adult_seafood//
-//classic_nature_depth_lively_family_seafood//
-//classic_nature_variety_personal_family_seafood//
-//classic_nature_variety_personal_adult_seafood//
-//classic_nature_variety_lively_family_seafood//
-//classic_nature_variety_lively_adult_seafood//
-
-
-//niche_nature_depth_personal_family_seafood//
-//niche_nature_depth_lively_adult_seafood//
-//niche_nature_depth_personal_adult_seafood//
-//niche_nature_depth_lively_family_seafood//
-//niche_nature_variety_personal_family_seafood//
-//niche_nature_variety_personal_adult_seafood//
-//niche_nature_variety_lively_family_seafood//
-//niche_nature_variety_lively_adult_seafood//
-
-//classic_entertainment_depth_personal_family_seafood//
-//classic_entertainment_depth_lively_family_seafood//
-//classic_entertainment_depth_personal_adult_seafood//
-//classic_entertainment_depth_lively_family_seafood//
-//classic_entertainment_variety_personal_family_seafood//
-//classic_entertainment_variety_personal_adult_seafood//
-//classic_entertainment_variety_lively_family_seafood//
-//classic_entertainment_variety_lively_adult_seafood//
-
-//niche_entertainment_depth_personal_family_seafood//
-//niche_entertainment_depth_lively_adult_seafood//
-//niche_entertainment_depth_personal_adult_seafood//
-//niche_entertainment_depth_lively_family_seafood//
-//niche_entertainment_variety_personal_family_seafood//
-//niche_entertainment_variety_personal_adult_seafood//
-//niche_entertainment_variety_lively_family_seafood//
-//niche_entertainment_variety_lively_adult_seafood//
-
-
-
-//whole day//
-//classic_history_depth_personal_family_seafood//
-const halfHistory={
-    Time: 'halfday',
-    Category: 'HistoricalLandmarks',
-    Explore: 'depth',
-    Style: 'personal',
-    Preferences: 'classic',
-    FamilyPlace: 'Yes',
-    Cuisine: 'seafood',
-
+const explore={
+    depth:'depth',
+    variety:'variety',
 }
 
-//classic_history_depth_lively_family_seafood//
-//classic_history_depth_personal_adult_seafood//
-//classic_history_depth_lively_family_seafood//
-//classic_history_variety_personal_family_seafood//
-//classic_history_variety_personal_adult_seafood//
-//classic_history_variety_lively_family_seafood//
-//classic_history_variety_lively_adult_seafood//
+const style={
+    personal:'personal',
+    lively:'lively',
+}
 
-//niche_history_depth_personal_family_seafood//
-//niche_history_depth_lively_adult_seafood//
-//niche_history_depth_personal_adult_seafood//
-//niche_history_depth_lively_family_seafood//
-//niche_history_variety_personal_family_seafood//
-//niche_history_variety_personal_adult_seafood//
-//niche_history_variety_lively_family_seafood//
-//niche_history_variety_lively_adult_seafood//
+const family ={
+    family:'family',
+    adult:'adult',
+}
 
-//classic_art_depth_personal_family_seafood//
-//classic_art_depth_lively_family_seafood//
-//classic_art_depth_personal_adult_seafood//
-//classic_art_depth_lively_family_seafood//
-//classic_art_variety_personal_family_seafood//
-//classic_art_variety_personal_adult_seafood//
-//classic_art_variety_lively_family_seafood//
-//classic_art_variety_lively_adult_seafood//
-
-
-//niche_art_depth_personal_family_seafood//
-//niche_art_depth_lively_adult_seafood//
-//niche_art_depth_personal_adult_seafood//
-//niche_art_depth_lively_family_seafood//
-//niche_art_variety_personal_family_seafood//
-//niche_art_variety_personal_adult_seafood//
-//niche_art_variety_lively_family_seafood//
-//niche_art_variety_lively_adult_seafood//
-
-
-//classic_nature_depth_personal_family_seafood//
-//classic_nature_depth_lively_family_seafood//
-//classic_nature_depth_personal_adult_seafood//
-//classic_nature_depth_lively_family_seafood//
-//classic_nature_variety_personal_family_seafood//
-//classic_nature_variety_personal_adult_seafood//
-//classic_nature_variety_lively_family_seafood//
-//classic_nature_variety_lively_adult_seafood//
-
-
-//niche_nature_depth_personal_family_seafood//
-//niche_nature_depth_lively_adult_seafood//
-//niche_nature_depth_personal_adult_seafood//
-//niche_nature_depth_lively_family_seafood//
-//niche_nature_variety_personal_family_seafood//
-//niche_nature_variety_personal_adult_seafood//
-//niche_nature_variety_lively_family_seafood//
-//niche_nature_variety_lively_adult_seafood//
-
-//classic_entertainment_depth_personal_family_seafood//
-//classic_entertainment_depth_lively_family_seafood//
-//classic_entertainment_depth_personal_adult_seafood//
-//classic_entertainment_depth_lively_family_seafood//
-//classic_entertainment_variety_personal_family_seafood//
-//classic_entertainment_variety_personal_adult_seafood//
-//classic_entertainment_variety_lively_family_seafood//
-//classic_entertainment_variety_lively_adult_seafood//
-
-//niche_entertainment_depth_personal_family_seafood//
-//niche_entertainment_depth_lively_adult_seafood//
-//niche_entertainment_depth_personal_adult_seafood//
-//niche_entertainment_depth_lively_family_seafood//
-//niche_entertainment_variety_personal_family_seafood//
-//niche_entertainment_variety_personal_adult_seafood//
-//niche_entertainment_variety_lively_family_seafood//
-//niche_entertainment_variety_lively_adult_seafood//
-
-
+const preferences={
+    classic:'classic',
+    niche:'niche',
+}
