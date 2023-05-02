@@ -264,17 +264,6 @@ h2{
 
 
 /*generator*/
-@media screen and (max-width:550px){
-    legend.qtitle{
-        font-size: 20px;
-    }
-
-    div.questionnarire{
-        gap:7px;
-    }
-
-    
-}
 
 h2.recommendations{
     text-align: center;
