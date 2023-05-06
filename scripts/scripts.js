@@ -239,7 +239,7 @@ function getRecommendations(plan){
       if (plan.Category === category.nature && plan.Style === style.personal) {
         headline.style.display = 'block';
         Arnold.style.display = 'block';
-        PublicGarden.style.display = 'block';
+        BosCommon.display ='block';
       }
       if (plan.Category === category.nature && plan.Style === style.lively) {
         headline.style.display = 'block';
@@ -247,10 +247,8 @@ function getRecommendations(plan){
         BosCommon.style.display = 'block';
       }
 
-      if (plan.Time === fullday.Time && plan.Category === category.nature && plan.Style === style.lively) {
+      if (plan.Time === fullday.Time && plan.Category === category.nature) {
         headline.style.display = 'block';
-        Greenway.style.display = 'block';
-        BosCommon.style.display = 'block';
         PublicGarden.style.display = 'block';
       }
      
