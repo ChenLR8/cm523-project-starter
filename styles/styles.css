@@ -38,7 +38,7 @@ body {
 main{
     padding: 1rem;
     padding-top: 0;
-    max-width: 1000px;
+    /**max-width: 1000px;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -48,11 +48,12 @@ p{
     font-size: var(--main-font-size);
 }
 
-header div.container{
+
+header div.bgcontainer{
     display:flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    gap: 50px;
+
     align-items: center;
     place-content: center;
     background-image:url('../images/skyline-02.png'); 
@@ -75,6 +76,24 @@ header div.container{
     }
   }
 
+button.stop{
+    background-color: transparent;
+    border: none;
+    border: 1px solid var(--title-color-alt);
+    justify-content: start;
+    color: white;
+    font-size: 16px;
+    padding: 0.2rem 1rem;
+
+    background-color: var(--title-color-alt);
+    margin-top: 31px;
+
+}
+
+button.stop:hover{
+    transform: scale(1.03, 1.03);
+}
+
 
 img#logo{
     width: 300px;
@@ -94,7 +113,7 @@ header h1{
 
 }
 
-header p {
+header p.start {
     text-align: center;
     background-color: var(--link-color);
     border-radius: 15px;
@@ -102,11 +121,11 @@ header p {
     transition: 0.3s ease-in-out;
 }
 
-header p:hover{
+header p.start:hover{
     transform: scale(1.03, 1.03);
 }
 
-header p a{
+header p.start a{
     color: var(--font-color);
     text-decoration: none;
     font-size: var(--cover-font-size);
@@ -162,7 +181,6 @@ nav ul{
     display: flex;
     font-size: var(--h3-font-size);
     padding-left: 10px;
-    justify-content: space-evenly;
     align-items: center;
     margin:0;
 
@@ -264,17 +282,6 @@ h2{
 
 
 /*generator*/
-@media screen and (max-width:550px){
-    legend.qtitle{
-        font-size: 20px;
-    }
-
-    div.questionnarire{
-        gap:7px;
-    }
-
-    
-}
 
 h2.recommendations{
     text-align: center;
@@ -355,7 +362,7 @@ div.btn{
 
 }
 
-button.next, button.back, button.submit{
+button.next, button.back, button.submit, button.refresh{
     border: none;
     font-size: var(--h3-font-size);
     font-family: var(--title-font);
@@ -384,18 +391,32 @@ label {
 
 }
 
-input[type="checkbox"]:checked + label{
+input:checked + label{
     background-color: var(--link-color); 
     border: none;
+    position: relative;
+    padding-right: 40px;
 
   }
-
+/*
 input[type="radio"]:checked + label{
     background-color: var(--link-color); 
     border: none;
-
+    position: relative;
+    padding-right: 40px;
   }
-
+*/
+input:checked + label::before{
+    content: '✔'; 
+    position: absolute;
+    top: 0;
+    right: 1px;
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+  }
 
 /*recommendations*/
 h3.name{
@@ -437,15 +458,85 @@ img.recommendations{
     object-position: center;
 }
 
-h2.recommendations{
+h2.recommtitle{
     padding-top: 0.5rem;
+    text-align: center;
 }
 
-/**Resources**/
+
+@media screen and (max-width:550px){
+
+    legend.qtitle{
+        font-size:  27px;
+    }
+
+    div.question_container{
+        gap:5px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    label{
+        font-size: 19px;
+    }
+ 
+}
+/*
+button.replay{
+    border: none;
+    font-size: var(--h3-font-size);
+    font-family: var(--title-font);
+    background-color: transparent;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: var(--title-color-alt);
+    display: flex;
+    justify-content:center;
+    width:100%;
+    margin-bottom: 2rem;
+}*/
+
+/**Resources
 article.resources{
-    max-width: 900px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+}**/
+div.filtercontainer{
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+}
+
+div.filtercontainer h3{
+    margin: 0;
+    padding: 0;
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    padding-right: 5px;
+    color: var(--title-color-alt);
+}
+select#filter{
+    border: none;
+    border-bottom: 2px solid var(--title-color-alt);
+    font-size: var(--h3-font-size);
+    background-color: var(--background-color);
+    font-family: var(--title-font);
+    color: var(--title-color-alt);
+
+}
+
+option{
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+}
+
+div.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
 }
 
 .description h2, div.files h2{
@@ -457,16 +548,17 @@ article.resources{
 .description p{
     margin: 0;
 }
+
 ul.cards{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
     row-gap: 3rem;
     padding-left: 0;
 }
 
 
-li.cardcontent{
+li.travelguide, li.food, li.event{
     list-style: none;
     transition: 0.3s ease-in-out;
     position:relative;
@@ -474,7 +566,7 @@ li.cardcontent{
     height: 200px;
 }
 
-li.cardcontent a{
+li.travelguide a, li.food a, li.event a{
     text-decoration: none;
     display:grid;
     place-content: center;
@@ -482,7 +574,7 @@ li.cardcontent a{
 
 }
 
-li.cardcontent:hover{
+li.travelguide:hover, li.food:hover, li.event:hover{
     transform: scale(1.03, 1.03);
 }
 
@@ -494,7 +586,7 @@ h2.cardh3{
     top:0;
 }
 
-p.travelguide {
+p.travelguidetag{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -504,7 +596,7 @@ p.travelguide {
     padding: 0.5rem 1rem;
   }
 
-p.type {
+p.typetag {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -514,7 +606,7 @@ p.type {
     padding: 0.5rem 1rem;
   }
 
-p.food {
+p.foodtag {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -565,7 +657,7 @@ a.file:hover{
 }
 
 article.project{
-    max-width: 900px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 
@@ -583,16 +675,20 @@ div.bg img{
 
 }
 
-footer div{
-    max-width: 900px;
+div.footer{
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    padding:0 16px;
 }
-footer{
 
-    width:100%
+footer{
+    margin: 0;
+    padding: 1rem;
 }
+p.footer{
+    margin: 0;
+}
+
 
 a.inline{
     color: black
