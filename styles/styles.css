@@ -390,6 +390,11 @@ div.btn{
 
 }
 
+div.btn:last-child{
+      gap:10px;  
+}
+
+
 button.next, button.back, button.submit, button.refresh{
     border: none;
     font-size: var(--h3-font-size);
@@ -506,7 +511,7 @@ h2.recommtitle{
     label{
         font-size: 19px;
     }
- 
+
 }
 /*
 button.replay{
