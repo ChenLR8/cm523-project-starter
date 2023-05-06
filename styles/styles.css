@@ -64,7 +64,6 @@ header div.bgcontainer{
     padding: 0;
     animation: slide-background 20s infinite linear;
     overflow: hidden;
-
 }
 
 @keyframes slide-background {
@@ -83,6 +82,9 @@ header div.bgcontainer{
     display:flex;
     align-items: center;
     justify-content: center;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 #animation {
@@ -391,7 +393,7 @@ div.btn{
 }
 
 div.btn:last-child{
-      gap:10px;  
+    gap: 8px;
 }
 
 
@@ -751,7 +753,7 @@ footer ul li{
     list-style: none;
     list-style: none;
     margin-right: 20px;
-    margin-bottom: 10px;
+
     padding-left: 0;
     margin-left: 0;
 }
