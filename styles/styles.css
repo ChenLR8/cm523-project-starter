@@ -55,7 +55,7 @@ header div.bgcontainer{
     flex-direction: column;
     gap:10px;
     align-items: center;
-    place-content: center;
+    justify-content: center;
     background-image:url('../images/skyline-02.png'); 
     background-position: bottom;
     background-size: cover;
