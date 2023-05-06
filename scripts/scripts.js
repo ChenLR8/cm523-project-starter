@@ -10,6 +10,33 @@ const Style = Array.from(document.getElementsByName('style'));
 const Preferences = Array.from(document.getElementsByName('preferences'));
 const Family = Array.from(document.getElementsByName('family'));
 const nav =document.querySelector('nav');
+const refreshbtn = document.querySelector('.refresh');
+
+refreshbtn.addEventListener('click', refresh)
+
+function refresh() {
+  location.reload();
+};
+
+
+	
+
+
+/*
+function FilterChange() {
+  const selectedCategory = filter.value;
+
+  content.forEach(item => {
+    if (selectedCategory === 'all' || item.classList.contains(selectedCategory)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}*/
+
+
+
 //NAV BAR//
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('nav ul');
@@ -25,7 +52,7 @@ hamburger.addEventListener('click', () => {
 
 
 /*const spotscontainer =document.querySelector('.spotscontainer');*/
-const h2= document.querySelector('h2.recommendations');
+const headline= document.querySelector('h2.recommtitle');
 const FreedomTrail = document.querySelector('#FreedomTrail')
 const JFK= document.querySelector('#JFK');
 const USS=document.querySelector('#USS');
@@ -45,7 +72,7 @@ const Bookshop = document.querySelector('#Bookshop');
 const SoWa = document.querySelector('#SoWa');
 const Greenway =document.querySelector('#Greenway');
 
-h2.style.display='none';
+headline.style.display='none';
 FreedomTrail.style.display='none';
 JFK.style.display='none';
 USS.style.display='none';
@@ -148,7 +175,7 @@ submitbtn.addEventListener('click', function() {
   });
   
   function scrollToRecommendations() {
-    const position = h2.offsetTop - offset;
+    const position = headline.offsetTop - offset;
   window.scrollTo({
     top: position,
     behavior: 'smooth'
@@ -165,53 +192,70 @@ function getRecommendations(plan){
       console.log(halfHistory1.Time + " halfHistory");*/
 
       if (plan.Category === category.history && plan.Preferences=== preferences.classic && plan.FamilyPlace === family.adult) {
-        console.log('true');
-        h2.style.display = 'block';
+        headline.style.display = 'block';
         FreedomTrail.style.display = 'block';
+        USS.style.display = 'block';
+      }
+
+      if (plan.Category === category.history && plan.Preferences=== preferences.niche && plan.FamilyPlace === family.adult) {
+        headline.style.display = 'block';
         JFK.style.display = 'block';
+        Library.style.display = 'block';
       }
 
       if (plan.Category === category.history && plan.FamilyPlace === family.family) {
-        console.log('true');
-        h2.style.display = 'block';
+        headline.style.display = 'block';
         TeaParty.style.display = 'block';
         USS.style.display = 'block';
       }
       
       if (plan.Category === category.art && plan.Preferences === preferences.classic&& plan.FamilyPlace === family.adult) {
-        h2.style.display = 'block';
+        headline.style.display = 'block';
         Isabella.style.display = 'block';
         MFA.style.display = 'block';
       }
 
       if (plan.Category === category.art && plan.FamilyPlace === family.family) {
-        h2.style.display = 'block';
+        headline.style.display = 'block';
         Children.style.display = 'block';
         NewEngland.style.display = 'block';
       }
 
       if (plan.Category === category.art && plan.Preferences === preferences.niche&&plan.FamilyPlace === family.adult) {
-        h2.style.display = 'block';
+        headline.style.display = 'block';
         Isabella.style.display = 'block';
         Bookshop.style.display = 'block';
       }
       if (plan.Time === fullday.Time && plan.Category === category.art && plan.Preferences === preferences.classic) {
-        h2.style.display = 'block';
+        headline.style.display = 'block';
         HarvardArt.style.display = 'block';
+        MFA.style.display = 'block';
+      }
+      if (plan.Time === fullday.Time &&plan.Category === category.art && plan.Preferences === preferences.niche&&plan.FamilyPlace === family.adult) {
+        headline.style.display = 'block';
+        SoWa.style.display = 'block';
+        Bookshop.style.display = 'block';
       }
       if (plan.Category === category.nature && plan.Style === style.personal) {
-        h2.style.display = 'block';
+        headline.style.display = 'block';
         Arnold.style.display = 'block';
         PublicGarden.style.display = 'block';
       }
       if (plan.Category === category.nature && plan.Style === style.lively) {
-        h2.style.display = 'block';
+        headline.style.display = 'block';
         Greenway.style.display = 'block';
         BosCommon.style.display = 'block';
       }
+
+      if (plan.Time === fullday.Time && plan.Category === category.nature && plan.Style === style.lively) {
+        headline.style.display = 'block';
+        Greenway.style.display = 'block';
+        BosCommon.style.display = 'block';
+        PublicGarden.style.display = 'block';
+      }
      
       if (plan.Category === category.entertainment) {
-        h2.style.display = 'block';
+        headline.style.display = 'block';
         Fenway.style.display = 'block';
         TD.style.display = 'block';
       }
@@ -257,3 +301,6 @@ const preferences={
     classic:'classic',
     niche:'niche',
 }
+
+
+

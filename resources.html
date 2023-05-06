@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
-    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/script2.js" defer></script>
   </head>
   <nav>
     <div class="navicon">
@@ -39,73 +39,106 @@
       <article class="resouces">
         <div class="description">
           <h2>More Resources </h2>
+          <div class="filtercontainer">
+            <label for="filter">Filter: </h3>
+            <select id="filter">
+              <option value="all">All</option>
+              <option value="travelguide">Travel guide</option>
+              <option value="food">Restaurant</option>
+              <option value="event">Entertainment</option>
+            </select>
+        </div>
         </div>
 
         <div class="large_container">
 
           <ul class="cards">
-            <li class="cardcontent">
+            <li class="travelguide">
               <a href="https://gbcvb.dcatalog.com/v/Official_Visitors_Guide_2022_2023/?page=1">
-                <img class="card" src="images/boscard1.jpg" alt="boston fall scenes">
+                <img class="card" src="images/boscard1.jpg" alt="Boston fall scenes">
                 <h2 class="cardh3">Official Visitor Guide 2023</h2>
-                <p class="travelguide">Travel guide</p>
+                <p class="travelguidetag">Travel guide</p>
             </a>
             </li>
 
-            <li class="cardcontent">
+            <li class="travelguide">
               <a href="https://www.tripadvisor.com/Attractions-g60745-Activities-c20-Boston_Massachusetts.html">
-                <img class="card" src="images/boston_night.jpg" alt="boston at night">
+                <img class="card" src="images/boston_night.jpg" alt="Boston at night">
                 <h2 class="cardh3">Night Life in Boston</h2>
-                <p class="travelguide">Travel guide</p>
+                <p class="travelguidetag">Travel guide</p>
               </a>
             </li>
 
-            <li class="cardcontent">
+            <li class="travelguide">
               <a href="https://www.boston.com/travel/travel/2022/05/13/most-frequently-asked-questions-boston-tour-guides/">
-                <img class="card" src="images/boscard3.jpg" alt="boston at dawn">
+                <img class="card" src="images/boscard3.jpg" alt="Boston street at dawn">
                 <h2 class="cardh3">Boston Frequent Q&A</h2>
-                <p class="travelguide">Travel guide</p>
+                <p class="travelguidetag">Travel guide</p>
               </a>
             </li>
 
-            <li class="cardcontent">
+            <li class="event">
               <a href="https://www.mlb.com/redsox/schedule/2023-05">
-                <img class="card" src="images/redsox.jpg" alt="stadium">
+                <img class="card" src="images/redsox.jpg" alt="Fenway park billboard">
                 <h2 class="cardh3">Boston Red Sox Schedule</h2>
-                <p class="type">Entertainment</p>
+                <p class="typetag">Entertainment</p>
               </a>
             </li>
 
-            <li class="cardcontent">
+            <li class="food">
               <a href=https://boston.eater.com/maps/best-restaurants-boston-north-end-little-italy>
-                <img class="card" src="images/Italian.jpg" alt="Pizza">
+                <img class="card" src="images/Italian.jpg" alt="Pizza in oven">
                 <h2 class="cardh3">North End: 
                   Italian Charm and Flair</h2>
-                <p class="food">Restaurant</p>
+                <p class="foodtag">Restaurant</p>
               </a>
             </li>
 
-            <li class="cardcontent">
+            <li class="event">
               <a href=https://www.hotels.com/go/usa/us-best-places-to-go-shopping-boston>
-                <img class="card" src="images/boscard4.jpg" alt="Pizza">
+                <img class="card" src="images/boscard4.jpg" alt="prudential shopping mall">
                 <h2 class="cardh3">10 Best Places for Shopping</h2>
-                <p class="type">Entertainment</p>
+                <p class="typetag">Entertainment</p>
               </a>
             </li>
 
-            <li class="cardcontent">
+            <li class="food">
               <a href=https://www.bostonmagazine.com/restaurants/best-bakeries-boston>
-                <img class="card" src="images/bread.jpg" alt="cake">
+                <img class="card" src="images/bread.jpg" alt="croissant">
                 <h2 class="cardh3">Best Bakeries in Boston</h2>
-                <p class="food">Restaurant</p>
+                <p class="foodtag">Restaurant</p>
               </a>
             </li>
 
-            <li class="cardcontent">
+            <li class="event">
               <a href=https://www.tripadvisor.com/Articles-lo9OJjlwYhVE-Best_summer_whale_watching.html>
-                <img class="card" src="images/whale.jpg" alt="cake">
+                <img class="card" src="images/whale.jpg" alt="whale">
                 <h2 class="cardh3">Whale Watch</h2>
-                <p class="type">Entertainment</p>
+                <p class="typetag">Entertainment</p>
+              </a>
+            </li>
+
+            <li class="food">
+              <a href=https://www.bostonmagazine.com/restaurants/best-seafood-restaurants-in-boston>
+                <img class="card" src="images/david-todd-mccarty-OrTjocYe1b4-unsplash.jpg" alt="lobster">
+                <h2 class="cardh3">Best Seafood in Boston</h2>
+                <p class="foodtag">Restaurant</p>
+              </a>
+            </li>
+
+            <li class="travelguide">
+              <a href=https://www.mbta.com/guides/boston-visitor-guide>
+                <img class="card" src="images/Boston_College_MBTA_station,_Brighton_MA.jpg" alt="Green line metro">
+                <h2 class="cardh3">Public Transportation</h2>
+                <p class="travelguidetag">Travel guide</p>
+              </a>
+            </li>
+
+            <li class="event">
+              <a href=https://www.meetboston.com/events>
+                <img class="card" src="images/jens-thekkeveettil-dBWvUqBoOU8-unsplash.jpg" alt="cake">
+                <h2 class="cardh3">Calendar of Events</h2>
+                <p class="typetag">Entertainment</p>
               </a>
             </li>
 
