@@ -53,7 +53,7 @@ header div.bgcontainer{
     display:flex;
     flex-wrap: nowrap;
     flex-direction: column;
-
+    gap:10px;
     align-items: center;
     place-content: center;
     background-image:url('../images/skyline-02.png'); 
@@ -76,23 +76,51 @@ header div.bgcontainer{
     }
   }
 
-button.stop{
-    background-color: transparent;
-    border: none;
-    border: 1px solid var(--title-color-alt);
-    justify-content: start;
+
+.button_container{
+    position: absolute;
+    bottom:50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#animation {
     color: white;
+    /*transition: all 0.3s ease-in-out;*/
     font-size: 16px;
-    padding: 0.2rem 1rem;
-
+    padding: 0.2rem 30px 0.2rem 30px;;
     background-color: var(--title-color-alt);
-    margin-top: 31px;
+    position:relative;
+    width: 150px;
 
 }
 
-button.stop:hover{
-    transform: scale(1.03, 1.03);
+#animation::before{
+ content: '';
+  position: absolute;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+
 }
+
+#switch:checked+#animation{
+    background-color: gray;
+    border-radius: none;
+    color: #0d2e3d;
+}
+
+#switch:checked+#animation::before{
+    transform: translateX(-120px) translateY(-50%);
+  }
+
+
 
 
 img#logo{
@@ -396,7 +424,6 @@ input:checked + label{
     border: none;
     position: relative;
     padding-right: 40px;
-
   }
 /*
 input[type="radio"]:checked + label{
