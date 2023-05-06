@@ -548,6 +548,13 @@ div.filtercontainer h3{
     padding-right: 5px;
     color: var(--title-color-alt);
 }
+#filterlabel{
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    padding-right: 5px;
+    color: var(--title-color);
+}
+
 select#filter{
     border: none;
     border-bottom: 2px solid var(--title-color-alt);
