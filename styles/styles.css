@@ -14,8 +14,7 @@
     --title-color:#0d2e3d;
     --title-color-alt:#db3e3d;
     --link-color:#eda12c;
-    --card-link-color: #a29eb1;
-    --card-link-color2:#efa7a7;
+    --card-link-color2:#ec6b6b;
     --title-font:'Oswald', sans-serif;
     --main-font: 'Roboto', sans-serif;
     --main-font-size: 16px;
@@ -78,14 +77,23 @@ header div.bgcontainer{
 
 .button_container{
     position: absolute;
-    bottom:50px;
+    top:20px;
     display:flex;
     align-items: center;
     justify-content: center;
-    left: 0;
-    right: 0;
+    left: 1rem;
     text-align: center;
 }
+/*
+#animation {
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    padding: 0.2rem 30px 0.2rem 30px;;
+    background-color: var(--title-color-alt);
+    position:relative;
+    width: 140px;}
+    */
 
 #animation {
     color: white;
@@ -94,7 +102,8 @@ header div.bgcontainer{
     padding: 0.2rem 30px 0.2rem 30px;;
     background-color: var(--title-color-alt);
     position:relative;
-    width: 150px;
+    width: 140px;
+    border-radius: 20px;
 
 }
 
@@ -108,7 +117,7 @@ header div.bgcontainer{
   right: 3px;
   top: 50%;
   transform: translateY(-50%);
-  transition: transform 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
 
 }
 
@@ -119,7 +128,7 @@ header div.bgcontainer{
 }
 
 #switch:checked+#animation::before{
-    transform: translateX(-120px) translateY(-50%);
+    right: calc(100% - 27px);
   }
 
 
@@ -336,21 +345,24 @@ div.questionnarire{
     place-content: center;
     margin:0;
     padding: 0;
-    height: 85vh;
+    height: 89vh;
+
+    
 }
 
 fieldset{
     padding: 2rem;
     border: 1px solid var(--title-color-alt);
     max-width: 700px;
+    border:none;
 
 
 }
-
+/*
 fieldset:first-child{
     border:none;
 
-}
+}*/
 
 fieldset:first-child div.btn{
     display: block;
@@ -392,9 +404,7 @@ div.btn{
 
 }
 
-div.btn:last-child{
-    gap: 8px;
-}
+
 
 
 button.next, button.back, button.submit, button.refresh{
@@ -411,27 +421,36 @@ button.next, button.back, button.submit, button.refresh{
 input[type=radio], input[type=checkbox]{
     display: none;
 
+
+
 }
 
 
-label {
+input[type=radio]+label {
     padding: 0.5rem 1rem;
     cursor: pointer;
     border-radius: 15px;
     font-weight: 500;
-    color: var(--title-color);
+    color: var(--card-link-color2);
     font-size: var(--h3-font-size);
     text-align: center;
+    min-width: 380px;
+    border:var(--card-link-color2) 1px solid ;
 
 
 }
 
-input:checked + label{
+
+input[type=radio]:checked + label{
     background-color: var(--link-color); 
     border: none;
     position: relative;
     padding-right: 40px;
+    color:var(--title-color);
   }
+
+
+
 /*
 input[type="radio"]:checked + label{
     background-color: var(--link-color); 
@@ -471,7 +490,7 @@ article.recommendations h2{
 div.spotscontainer div{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 2rem;
     border: 1px solid var(--title-color-alt);
     padding: 1.5rem;
@@ -510,8 +529,13 @@ h2.recommtitle{
         margin-bottom: 0.5rem;
     }
 
-    label{
+    input[type=radio]+label{
         font-size: 19px;
+        min-width:320px;
+    }
+
+    fieldset{
+        max-width:410px;
     }
 
 }

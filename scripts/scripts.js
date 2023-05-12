@@ -135,13 +135,17 @@ backbtn.forEach(backbtn=>{
     backbtn.addEventListener('click', PreviousQuestion);
     })
 
+function changeSelected(){
+  
+}
 //print recommendation//
 
 function getPlan(){
     Time.forEach(item=>{
         if(item.checked){
             plan.Time = item.value;
-        };});
+        }
+        ;});
     Category.forEach(item=>{
         if(item.checked){
             plan.Category = item.value;
@@ -231,6 +235,7 @@ function getRecommendations(plan){
         HarvardArt.style.display = 'block';
         MFA.style.display = 'block';
       }
+      
       if (plan.Time === fullday.Time &&plan.Category === category.art && plan.Preferences === preferences.niche&&plan.FamilyPlace === family.adult) {
         headline.style.display = 'block';
         SoWa.style.display = 'block';
